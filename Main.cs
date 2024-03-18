@@ -30,6 +30,8 @@ namespace AccessCaseDatabase
 
                 GroupPrincipal group_VarianUsers = GroupPrincipal.FindByIdentity(ctx, "Varian Users");
 
+                //Test pull request
+
                 if (user != null && user.IsMemberOf(group_VarianUsers)) //Om användaren finns i Varian grupperna, godkänn hans/hennes credentials med lösenord
                 {
                     Check_Password.Check_Password Password_Popup = new Check_Password.Check_Password(); //Popup för att skriva in lösenordet
