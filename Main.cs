@@ -30,7 +30,7 @@ namespace AccessCaseDatabase
 
                 GroupPrincipal group_VarianUsers = GroupPrincipal.FindByIdentity(ctx, "Varian Users");
 
-                //Test pull request
+                //Test pull request poopoo 
 
                 if (user != null && user.IsMemberOf(group_VarianUsers)) //Om användaren finns i Varian grupperna, godkänn hans/hennes credentials med lösenord
                 {
