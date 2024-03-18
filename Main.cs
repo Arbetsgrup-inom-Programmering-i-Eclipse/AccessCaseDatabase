@@ -24,7 +24,7 @@ namespace AccessCaseDatabase
 
             try
             {
-                string domain = "ltvastmanland.se"; //Kolla att användaren finns i Varian grupperna
+                string domain = "YOURDOMAIN"; //Kolla att användaren finns i Varian grupperna
                 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, domain);
                 UserPrincipal user = UserPrincipal.FindByIdentity(ctx, Environment.UserName);
 
