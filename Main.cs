@@ -21,18 +21,17 @@ namespace AccessCaseDatabase
         [STAThread]
         static void Main()
         {
-            //Test new branch
             try
             {
-                string domain = "YOURDOMAIN"; //Kolla att anv‰ndaren finns i Varian grupperna
+                string domain = "YOURDOMAIN"; //Kolla att anv√§ndaren finns i Varian grupperna
                 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, domain);
                 UserPrincipal user = UserPrincipal.FindByIdentity(ctx, Environment.UserName);
 
                 GroupPrincipal group_VarianUsers = GroupPrincipal.FindByIdentity(ctx, "Varian Users");
 
-                if (user != null && user.IsMemberOf(group_VarianUsers)) //Om anv‰ndaren finns i Varian grupperna, godk‰nn hans/hennes credentials med lˆsenord
+                if (user != null && user.IsMemberOf(group_VarianUsers)) //Om anv√§ndaren finns i Varian grupperna, godk√§nn hans/hennes credentials med l√∂senord
                 {
-                    Check_Password.Check_Password Password_Popup = new Check_Password.Check_Password(); //Popup fˆr att skriva in lˆsenordet
+                    Check_Password.Check_Password Password_Popup = new Check_Password.Check_Password(); //Popup f√∂r att skriva in l√∂senordet
                     Password_Popup.ShowDialog();
 
                     if(Password_Popup.DialogResult == System.Windows.Forms.DialogResult.OK && Password_Popup.pass != null)
@@ -47,14 +46,14 @@ namespace AccessCaseDatabase
                         }
                         else
                         {
-                            MessageBox.Show("Fel lˆsenord", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show("Fel l√∂senord", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Du ‰r inte registerad som Varian anv‰ndare", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Du √§r inte registerad som Varian anv√§ndare", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception e)
@@ -62,7 +61,7 @@ namespace AccessCaseDatabase
                 MessageBox.Show("Fel\r\n" + e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 try
                 {
-                    AriaInterface.Disconnect(); // S‰kerst‰ll att anslutningen till DB st‰ngs om det uppstÂr ett fel
+                    AriaInterface.Disconnect(); // S√§kerst√§ll att anslutningen till DB st√§ngs om det uppst√•r ett fel
                 }
                 catch { }
 
