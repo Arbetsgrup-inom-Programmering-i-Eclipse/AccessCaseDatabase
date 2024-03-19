@@ -14,11 +14,8 @@ namespace SQL
 
         public static void Connect()
         {
-            // Clinical database
-            connection = new SqlConnection("data source = IPADDRESS; initial catalog = VARIAN; persist security info = True; user id = USERID; password = PASSWORD; MultipleActiveResultSets = True");
-            
-            // Research database
-            //connection = new SqlConnection("data source = IPADDRESS; initial catalog = VARIAN; persist security info = True; user id = USERID; password = PASSWORD; MultipleActiveResultSets = True");
+            // Connection to database
+            connection = new SqlConnection("data source = IPADDRESS; initial catalog = VARIAN; persist security info = True; user id = USERID; password = PASSWORD; MultipleActiveResultSets = True");         
             
             connection.Open();
         }
