@@ -21,7 +21,7 @@ namespace AccessCaseDatabase
         [STAThread]
         static void Main()
         {
-
+            //Test push master
             try
             {
                 string domain = "YOURDOMAIN"; //Kolla att användaren finns i Varian grupperna
