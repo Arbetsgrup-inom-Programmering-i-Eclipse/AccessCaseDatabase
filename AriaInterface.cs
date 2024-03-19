@@ -17,9 +17,6 @@ namespace SQL
             // Clinical database
             connection = new SqlConnection("data source = IPADDRESS; initial catalog = VARIAN; persist security info = True; user id = USERID; password = PASSWORD; MultipleActiveResultSets = True");
             
-            // Research database
-            //connection = new SqlConnection("data source = IPADDRESS; initial catalog = VARIAN; persist security info = True; user id = USERID; password = PASSWORD; MultipleActiveResultSets = True");
-            
             connection.Open();
         }
 
